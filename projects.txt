@@ -1,0 +1,35 @@
+﻿Scalable Multi-Agentic System on Kubernetes | Autogen, FastAPI, Docker, AKS, ACR, Grafana
+
+
+• Deployed a production-grade multi-agent AI platform using Autogen (AG2) and FastAPI to coordinate
+intelligent agent workflows through scalable REST services.
+• Containerized with Docker and deployed on AKS via ACR, implementing load balancing, horizontal scaling, and
+fault-tolerant architecture for high availability under concurrent traffic.
+• Delivered an end-to-end cloud-native AI service demonstrating strong LLMOps practices, with real-time
+observability via Grafana dashboards monitoring performance and service health.
+
+
+
+
+
+
+Samuel Code: Claude Code Alternative | Python, Go, AutoGen, OpenAI, MCP, Langfuse
+• Engineered a Claude Code-style autonomous coding agent powered by GPT-4o mini that takes a single natural
+language prompt and delivers a complete, ready-to-run software project.
+• Eliminated the gap between AI text and real code using MCP tool calling — agents write actual files to disk via
+a two-agent system where one owns architecture and the other owns code.
+• Built an interactive CLI in Golang for prompt input and project streaming, with Langfuse tracing every
+GPT-4o mini call and tool execution across the pipeline.
+
+
+
+
+
+
+NCERT RAG Learning Assistant (Intel Unnati Industrial Training) | Python, FastAPI, ChromaDB, llama3.1
+• Built a RAG-based learning assistant for NCERT Class 5–10 students that retrieves grade-appropriate answers
+from syllabus-aligned textbooks instead of a generic knowledge base.
+• Architected separate ChromaDB vector stores per class and subject, solving the concept leakage problem
+common in single-database RAG systems.
+• Powered by Meta LLaMA 3.1 (8B) via Groq API, with a FastAPI backend and full-stack web interface for
+seamless student interaction.

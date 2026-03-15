@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #f6f6f8;
+  }
+}
+
+@layer utilities {
+  .section-border {
+    border: 1px solid #cccccc;
+  }
+
+  .project-card {
+    border: 1px solid #cccccc;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .project-card:hover {
+    border-color: #999999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+  }
+
+  .stat-card {
+    border: 1px solid #cccccc;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .stat-card:hover {
+    border-color: #1A1A1A;
+    transform: scale(1.03);
+  }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1A1A1A;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after,
+  .nav-link-active::after {
+    width: 100%;
+  }
+
+  .filter-btn {
+    border: 1px solid #cccccc;
+    transition: all 0.2s ease;
+  }
+
+  .filter-btn:hover {
+    border-color: #1A1A1A;
+    color: #1A1A1A;
+  }
+
+  .filter-btn-active {
+    background-color: #1A1A1A;
+    color: #ffffff;
+    border-color: #1A1A1A;
+  }
+
+  .tech-tag {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .tech-tag:hover {
+    background-color: #1A1A1A;
+    color: #ffffff;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.project-number {
+  font-size: 11px;
+  color: #b0b0b0;
+  letter-spacing: 0.15em;
+}

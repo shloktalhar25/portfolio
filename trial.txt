@@ -1,0 +1,174 @@
+Nice — for a portfolio you want something **clear, structured, and a bit more technical than LinkedIn**. A good project page usually has these sections:
+
+1. Overview
+2. Problem Statement
+3. Architecture
+4. Tech Stack
+5. Implementation
+6. Key Learnings
+7. Future Improvements
+
+Here’s a **ready-to-use portfolio description** you can paste into your portfolio or GitHub README.
+
+---
+
+# Serverless Crypto Data ELT Pipeline
+
+## Project Overview
+
+This project implements a **serverless ELT (Extract, Load, Transform) data pipeline** that ingests real-time cryptocurrency market data from the **CoinGecko API**, stores it in a **cloud data lake**, and integrates the data with **Snowflake** for analytics. The pipeline is designed using modern **cloud-native and Infrastructure-as-Code principles**, ensuring scalability, reproducibility, and automated deployment.
+
+The system leverages **Azure Functions** for serverless ingestion, **Azure Data Lake Storage Gen2 (ADLS Gen2)** as the raw data lake, and **Snowflake External Stages** to enable the data warehouse to directly query files stored in the data lake.
+
+---
+
+# Problem Statement
+
+Many analytics systems require ingesting **external API data at regular intervals** and storing it in a scalable and queryable format. However, building such pipelines manually can lead to inconsistent environments, deployment issues, and difficulty scaling.
+
+This project demonstrates how to build a **cloud-native ELT pipeline** that:
+
+* Automatically collects external API data
+* Stores raw data in a scalable data lake
+* Uses serverless infrastructure to reduce operational overhead
+* Enables a data warehouse to access data lake files directly
+
+---
+
+# Architecture
+
+Pipeline Architecture:
+
+```
+CoinGecko API
+      ↓
+Azure Function (Timer Trigger)
+      ↓
+Azure Data Lake Storage Gen2 (Raw Data)
+      ↓
+Snowflake External Stage
+      ↓
+Future Layer: dbt Transformations
+      ↓
+Future Layer: Analytics Dashboard
+```
+
+### Data Flow
+
+1. **Azure Function** runs on a scheduled timer trigger.
+2. The function fetches cryptocurrency market data from the **CoinGecko API**.
+3. Raw API responses are stored as **JSON files** in **Azure Data Lake Storage Gen2**.
+4. Data is partitioned using a **year/month/day folder structure** to improve scalability and query performance.
+5. **Snowflake External Stage** is configured to read raw files directly from ADLS without duplicating storage.
+
+---
+
+# Tech Stack
+
+**Programming**
+
+* Python
+
+**Cloud Services**
+
+* Azure Functions (Serverless compute)
+* Azure Data Lake Storage Gen2
+
+**Data Warehouse**
+
+* Snowflake
+
+**Infrastructure as Code**
+
+* Terraform
+
+**Data Transformation (Planned)**
+
+* dbt
+
+**Data Source**
+
+* CoinGecko REST API
+
+---
+
+# Key Implementation Details
+
+### Serverless Data Ingestion
+
+A **Python-based Azure Function** runs on a scheduled timer trigger to fetch cryptocurrency market data periodically from the CoinGecko API.
+
+### Data Lake Storage Design
+
+Raw API responses are stored in **Azure Data Lake Storage Gen2** using a **partitioned folder structure**:
+
+```
+raw/
+   coingecko/
+      year=2026/
+         month=03/
+            day=14/
+               crypto_10_30.json
+```
+
+This structure enables efficient querying and scalable storage of time-series data.
+
+### Infrastructure as Code
+
+All cloud infrastructure resources—including:
+
+* Azure Function App
+* Storage Accounts
+* Data Lake Containers
+* Snowflake Database and Schema
+
+were provisioned using **Terraform**, ensuring that the environment can be recreated consistently using a single command.
+
+### Serverless Deployment Strategy
+
+The Azure Function code was packaged using a **ZIP-based deployment method**, enabling immutable and repeatable deployments managed through Terraform.
+
+### Data Warehouse Integration
+
+A **Snowflake External Stage** was configured to allow Snowflake to read raw data files directly from the data lake, enabling future transformation workflows without duplicating data storage.
+
+---
+
+# Key Learnings
+
+This project helped me understand:
+
+* Designing **serverless data ingestion pipelines**
+* Implementing **modern ELT architectures**
+* Using **Infrastructure as Code (Terraform)** for cloud resources
+* Structuring scalable **data lake storage systems**
+* Integrating **cloud data lakes with data warehouses**
+* Managing **cloud authentication and storage integrations**
+
+---
+
+# Future Improvements
+
+The next steps for the project include:
+
+* Implementing **Snowpipe** for automatic ingestion of new data files into Snowflake
+* Building **dbt transformation models** to convert raw data into analytics-ready tables
+* Creating a **dashboard to visualize cryptocurrency market trends**
+* Adding **CI/CD pipelines** for automated infrastructure and code deployments
+* Implementing **data quality checks and monitoring**
+
+---
+
+# Tech Stack Summary
+
+Python • Azure Functions • Azure Data Lake Storage Gen2 • Snowflake • Terraform • dbt • REST APIs • Serverless Architecture • Infrastructure as Code • Data Warehousing
+
+---
+
+If you want, I can also help you add **3 more sections that make portfolios look very strong to recruiters**:
+
+• **Architecture diagram**
+• **Terraform folder structure explanation**
+• **Sample code snippets from the pipeline**
+
+These make your project look **much more professional than most data engineering portfolios.**
