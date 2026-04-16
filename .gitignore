@@ -3,3 +3,13 @@ node_modules
 .env
 dist
 build
+*.log
+tsconfig.tsbuildinfo
+
+# User files to ignore
+trail1.txt
+trial.txt
+new_proj.txt
+instructions
+projects.txt
+screen.png
