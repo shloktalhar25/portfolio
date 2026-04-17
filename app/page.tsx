@@ -122,7 +122,7 @@ export default function Home() {
                                         <div className="flex-grow space-y-3">
                                             <ul className="text-slate-600 text-sm leading-relaxed space-y-2 list-none">
                                                 <li className="flex gap-2"><span className="text-slate-400 shrink-0">›</span><span>Engineered a Claude Code style autonomous coding agent powered by GPT-4o mini that takes a single natural language prompt and delivers a complete, ready to run software project.</span></li>
-                                                <li className="flex gap-2"><span className="text-slate-400 shrink-0">›</span><span>Eliminated the gap between AI text and real code using MCP tool calling — agents write actual files to disk via a two agent system where one owns architecture and the other owns code.</span></li>
+                                                <li className="flex gap-2"><span className="text-slate-400 shrink-0">›</span><span>Eliminated the gap between AI text and real code using MCP tool calling , agents write actual files to disk via a two agent system where one owns architecture and the other owns code.</span></li>
                                                 <li className="flex gap-2"><span className="text-slate-400 shrink-0">›</span><span>Built an interactive CLI in Golang for prompt input and project streaming, with Langfuse tracing every GPT-4o mini call and tool execution across the pipeline.</span></li>
                                             </ul>
                                         </div>
