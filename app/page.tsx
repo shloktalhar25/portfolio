@@ -54,7 +54,7 @@ export default function Home() {
                     <li><a className="nav-link text-sm font-bold uppercase tracking-widest text-slate-500 hover:text-primary transition-colors pb-1" href="#header">About</a></li>
                     <li><a className="nav-link text-sm font-bold uppercase tracking-widest text-slate-500 hover:text-primary transition-colors pb-1" href="#footer">Contact</a></li>
                     <li className="md:ml-auto">
-                        <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/17Gz_xkr2Ln9OdK4CcjAVxn2nDRhHsNAW/view?usp=sharing" className="text-xs font-mono font-bold uppercase text-primary border border-primary px-3 py-1 hover:bg-primary hover:text-white transition-all inline-block">View_Resume.pdf</a>
+                        <a target="_blank" rel="noopener noreferrer" href="/shlok_resume.pdf" className="text-xs font-mono font-bold uppercase text-primary border border-primary px-3 py-1 hover:bg-primary hover:text-white transition-all inline-block">View_Resume.pdf</a>
                     </li>
                 </ul>
             </nav>
